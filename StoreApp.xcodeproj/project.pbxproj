@@ -17,6 +17,10 @@
 		32810DCD2B30887400CD0770 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32810DCC2B30887400CD0770 /* Color+Extension.swift */; };
 		32810DD22B3095B700CD0770 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32810DD12B3095B700CD0770 /* MainView.swift */; };
 		32810DD52B30999700CD0770 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32810DD42B30999700CD0770 /* ProductModel.swift */; };
+		32810DD72B309EF700CD0770 /* CustomGridProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32810DD62B309EF700CD0770 /* CustomGridProductCell.swift */; };
+		32810DDA2B30A55800CD0770 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32810DD92B30A55700CD0770 /* UIScreen+Extension.swift */; };
+		32810DDD2B3123CA00CD0770 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32810DDC2B3123CA00CD0770 /* MainViewModel.swift */; };
+		32810DE02B31315600CD0770 /* NetworkManagerPro in Frameworks */ = {isa = PBXBuildFile; productRef = 32810DDF2B31315500CD0770 /* NetworkManagerPro */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,9 @@
 		32810DCC2B30887400CD0770 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		32810DD12B3095B700CD0770 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		32810DD42B30999700CD0770 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		32810DD62B309EF700CD0770 /* CustomGridProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGridProductCell.swift; sourceTree = "<group>"; };
+		32810DD92B30A55700CD0770 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
+		32810DDC2B3123CA00CD0770 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32810DE02B31315600CD0770 /* NetworkManagerPro in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +74,7 @@
 				32810D992B306A9200CD0770 /* App */,
 				32810DBE2B30851600CD0770 /* Views */,
 				32810DD32B3095D600CD0770 /* Models */,
+				32810DD82B30A15C00CD0770 /* Components */,
 				32810DCB2B30886000CD0770 /* Extensions */,
 				32810D8F2B30683300CD0770 /* Assets.xcassets */,
 				32810D912B30683300CD0770 /* Preview Content */,
@@ -93,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				32810DC92B30868400CD0770 /* MainTabView.swift */,
-				32810DD12B3095B700CD0770 /* MainView.swift */,
+				32810DDB2B3123B100CD0770 /* MainView */,
 				32810DC32B3085F600CD0770 /* CategoriesView.swift */,
 				32810DC52B30860300CD0770 /* ProductsView.swift */,
 				32810DC72B30861100CD0770 /* ProductsDetailView.swift */,
@@ -105,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				32810DCC2B30887400CD0770 /* Color+Extension.swift */,
+				32810DD92B30A55700CD0770 /* UIScreen+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -115,6 +125,23 @@
 				32810DD42B30999700CD0770 /* ProductModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		32810DD82B30A15C00CD0770 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				32810DD62B309EF700CD0770 /* CustomGridProductCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		32810DDB2B3123B100CD0770 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				32810DD12B3095B700CD0770 /* MainView.swift */,
+				32810DDC2B3123CA00CD0770 /* MainViewModel.swift */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +160,9 @@
 			dependencies = (
 			);
 			name = StoreApp;
+			packageProductDependencies = (
+				32810DDF2B31315500CD0770 /* NetworkManagerPro */,
+			);
 			productName = StoreApp;
 			productReference = 32810D882B30682F00CD0770 /* StoreApp.app */;
 			productType = "com.apple.product-type.application";
@@ -161,6 +191,9 @@
 				Base,
 			);
 			mainGroup = 32810D7F2B30682F00CD0770;
+			packageReferences = (
+				32810DDE2B31315500CD0770 /* XCRemoteSwiftPackageReference "NetworkManagerPro" */,
+			);
 			productRefGroup = 32810D892B30682F00CD0770 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -188,13 +221,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				32810DC62B30860300CD0770 /* ProductsView.swift in Sources */,
+				32810DDA2B30A55800CD0770 /* UIScreen+Extension.swift in Sources */,
 				32810DD22B3095B700CD0770 /* MainView.swift in Sources */,
 				32810DCD2B30887400CD0770 /* Color+Extension.swift in Sources */,
 				32810D8C2B30682F00CD0770 /* StoreAppApp.swift in Sources */,
+				32810DD72B309EF700CD0770 /* CustomGridProductCell.swift in Sources */,
 				32810DC42B3085F600CD0770 /* CategoriesView.swift in Sources */,
 				32810DC82B30861100CD0770 /* ProductsDetailView.swift in Sources */,
 				32810DCA2B30868400CD0770 /* MainTabView.swift in Sources */,
 				32810DD52B30999700CD0770 /* ProductModel.swift in Sources */,
+				32810DDD2B3123CA00CD0770 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +431,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		32810DDE2B31315500CD0770 /* XCRemoteSwiftPackageReference "NetworkManagerPro" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dsila2017/NetworkManagerPro";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		32810DDF2B31315500CD0770 /* NetworkManagerPro */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32810DDE2B31315500CD0770 /* XCRemoteSwiftPackageReference "NetworkManagerPro" */;
+			productName = NetworkManagerPro;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 32810D802B30682F00CD0770 /* Project object */;
 }

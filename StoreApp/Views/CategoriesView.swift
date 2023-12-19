@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct CategoriesView: View {
+    
+    // MARK: - body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Hello, World!")
     }
 }
 
+
+// MARK: - Preview
 struct CategoriesView_Previews: PreviewProvider {
     static var previews: some View {
         CategoriesView()

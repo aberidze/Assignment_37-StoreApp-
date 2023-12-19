@@ -14,17 +14,19 @@ struct MainTabView: View {
         
         TabView {
             
-            MainView()
+            MainView(mainViewModel: MainViewModel())
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
                 }
+                .tag(0)
             
-            MainView()
+            CategoriesView()
                 .tabItem {
                     Image(systemName: "square.grid.2x2.fill")
                     Text("Categories")
                 }
+                .tag(1)
         }
         .tint(.customDarkBlueTint)
     }
